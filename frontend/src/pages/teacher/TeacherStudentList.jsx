@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 function TeacherStudentList() {
     // const dbJson = "https://jsonserver-6gyk.onrender.com";
-    const dbJson = "http://localhost:7000";
+    const dbJson = "http://localhost:7000/Student";
     const [student, setStudent] = useState([]);
   const getStudentList = () => {
-    fetch(`${dbJson}/Admin_Teacher_student`)
+    fetch(`${endpoint}/Admin_Teacher_student`)
       .then(response => response.json())
       .then(data => setStudent(data))
       .catch(error => console.log(error))
