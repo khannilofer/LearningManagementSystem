@@ -4,21 +4,24 @@ import { Link } from "react-router-dom";
 
 function AdminTeacherList() {
   // const dbJson = "https://jsonserver-6gyk.onrender.com";
-  const dbJson = "http://localhost:7000";
+
+  const endpoint = "http://localhost:7000";
+  
   const [teacher, setTeacher] = useState([]);
   const getTeacherList = () => {
-    fetch(`${dbJson}/Admin_Teacher`)
+    fetch(`${endpoint}/Admin_Teacher`)
       .then(response => response.json())
       .then(data => setTeacher(data))
       .catch(error => console.log(error))
   }
+
   useEffect(() => {
     getTeacherList();
   }, [])
 
   return (
     <div className="main_module">
-      <p className="heading">Teachers List</p>
+      <h1 className="list-heading">Teachers List</h1>
       <div className="module2">
         <Link to={"add/"}className="btn btn-border-blue">+ Add Teacher</Link>
         <button className="btn btn-border-blue">Bulk Upload</button>
