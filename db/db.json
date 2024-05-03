@@ -510,6 +510,12 @@
       "faculty": "commerce",
       "year": "Tybca",
       "id": 136728
+    },
+    {
+      "name": "Nilofer",
+      "faculty": "science",
+      "year": "2023",
+      "id": 136729
     }
   ],
   "Admin_Teacher": [
